@@ -1,7 +1,7 @@
 package chap01_basic;
 import java.util.Scanner;
 
-public class less_6_Calculator {
+public class Calculator {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

@@ -3,7 +3,7 @@ package chap01_basic;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class less_9_ATM {
+public class ATM {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

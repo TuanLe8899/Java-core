@@ -2,7 +2,7 @@ package chap01_basic;
 
 import java.util.Scanner;
 
-public class less_6_NextVsNextLineScanner {
+public class ScannerMethod {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

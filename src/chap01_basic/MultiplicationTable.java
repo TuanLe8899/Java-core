@@ -1,6 +1,6 @@
 package chap01_basic;
 
-public class less_5_BangCuuChuong {
+public class MultiplicationTable {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

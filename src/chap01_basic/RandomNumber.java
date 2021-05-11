@@ -1,6 +1,6 @@
 package chap01_basic;
 
-public class less_10_TestRandom {
+public class RandomNumber {
 
 	public static void main(String[] args) {
 
