@@ -2,35 +2,71 @@ package chap02_oop;
 
 public class Main {
 	
-	// Tổng hai phân số 
+	// Tổng   hai phân số 
+	// Hiệu   hai phân số
+	// Tích   hai phân số
+	// Thương hai phân số
 	public static void main(String[] args) {
 		Fraction fractionA = new Fraction(1, 4);
 		Fraction fractionB = new Fraction(2, 4);
 		
 		Fraction fractionC = new Fraction(fractionA, fractionB, "+");
-		System.out.printf("%s + %s = %s", fractionA.print(), fractionB.print(), fractionC.print());
+		System.out.printf("%s + %s = %s \n", fractionA.print(), fractionB.print(), fractionC.print());
+		Fraction fractionD = new Fraction(fractionA, fractionB, "-");
+		System.out.printf("%s - %s = %s \n", fractionA.print(), fractionB.print(), fractionD.print());
+		Fraction fractionE = new Fraction(fractionA, fractionB, "*");
+		System.out.printf("%s * %s = %s \n", fractionA.print(), fractionB.print(), fractionE.print());
+		Fraction fractionF = new Fraction(fractionA, fractionB, "/");
+		System.out.printf("%s / %s = %s \n", fractionA.print(), fractionB.print(), fractionF.print());
 	}
-		
-	// 009 Fraction  
+		 
 	// UCLN của 2 số a và b là giá trị lớn nhất mà cả 2 số a và b đều chia hết cho nó 
-	// Kiểm tra phân số tối giản khi UCLN của tử số và mẫu số = 1
-	// Tối giản phân số
 	// 3/9	1/3		UCLN = 3
-	
-	public static void main009(String[] args) {
+	public static void main011(String[] args) {
 		Fraction fractionA	= new Fraction(2, 8);	// 2/4
 		Fraction fractionB	= new Fraction(2, 4);	// 3/9
 		
-		System.out.println(fractionA.print());
+		System.out.printf("UCLN của %s là: %d \n",fractionA.print(),fractionA.UCLN(fractionA.getNumerator(), fractionA.getDenominator()));
+		System.out.printf("UCLN của %s là: %d \n",fractionB.print(),fractionB.UCLN(fractionB.getNumerator(), fractionB.getDenominator()));
+	}	
+	
+	// Kiểm tra phân số tối giản khi UCLN của tử số và mẫu số = 1
+	public static void main012(String[] args) {
+		Fraction fractionA	= new Fraction(2, 8);	// 2/4
+		Fraction fractionB	= new Fraction(1, 4);	// 3/9
+		
+		if(fractionA.checkNormalize() == true) {
+			System.out.println(fractionA.print()+" đã ở dạng tối giản");
+		} else {
+			System.out.println(fractionA.print()+" chưa ở dạng tối giản");
+		}
+		
+		if(fractionB.checkNormalize() == true) {
+			System.out.println(fractionB.print()+" đã ở dạng tối giản");
+		} else {
+			System.out.println(fractionB.print()+" chưa ở dạng tối giản");
+		}
+	}
+	
+	// Tối giản phân số
+	public static void main013(String[] args) {
+		Fraction fractionA	= new Fraction(2, 8);	// 2/4
+		Fraction fractionB	= new Fraction(2, 4);	// 3/9
+		
+		System.out.print("Phân số "+fractionA.print()+" sau khi tối giản là: ");
 		fractionA.normalize();
 		System.out.println(fractionA.print());
-	}
 		
-	// 008 Fraction  
+		System.out.print("Phân số "+fractionB.print()+" sau khi tối giản là: ");
+		fractionB.normalize();
+		System.out.println(fractionB.print());
+
+	}
+	
+	// Fraction  
 	// Khởi tạo phân số
 	// Nhập phân số
 	// In phân số
-	
 	public static void main008(String[] args) {
 		Fraction fractionA	= new Fraction(2, 4);
 		Fraction fractionB	= new Fraction(3, 9);
@@ -38,7 +74,8 @@ public class Main {
 		System.out.println(fractionA.print());
 		System.out.println(fractionB.print());
 	}
-	// Static
+	
+	// 008 Static
 	public static void main08(String[] args) {
 		Counter counterObj1	= new Counter();	// object instance
 		Counter counterObj2	= new Counter();
@@ -49,12 +86,12 @@ public class Main {
 //		counterObj3.showCount();
 		Counter.showCount();
 	}
-	
+
 	// 007 Access modifier  
-	//	Private chá»‰ truy cáº­p Ä‘Æ°á»£c trong class 				(property, method)
-	//	Null (rá»—ng) truy cáº­p trong package 					(class,property, method)
-	//	Protected truy cáº­p trong package vÃ  cÃ¡c subclasses 	(property, method)
-	//	Public truy cáº­p tá»« báº¥t ká»³ Ä‘Ã¢u 						(class, property, method)
+	//	Private chặn truy cập ở ngoài class 				(property, method)
+	//	Null (rỗng) truy cập trong package 					(class,property, method)
+	//	Protected truy cập trong package và các subclasses 	(property, method)
+	//	Public truy cập từ bất kỳ đâu 						(class, property, method)
 
 	public static void main007(String[] args) {
 		Person personObj	= new Person();

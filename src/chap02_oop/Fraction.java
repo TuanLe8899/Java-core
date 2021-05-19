@@ -29,6 +29,7 @@ public class Fraction {
 			case "/":
 			case ":":
 				this.divide(fractionA, fractionB);
+				break;
 			default:
 				this.add(fractionA, fractionB);
 				break;
@@ -50,21 +51,27 @@ public class Fraction {
 	
 	// Hiệu 2 phân số x/y - a/b = (x*b - a*y)/(y*b)
 	private void sub(Fraction fractionA, Fraction fractionB){
-		System.out.println("sub");
+		this.setNumerator(fractionA.getNumerator() * fractionB.getDenominator() - fractionA.getDenominator() * fractionB.getNumerator());
+		this.setDenominator(fractionA.getDenominator() * fractionB.getDenominator());
+		this.normalize();
 	}
 	
 	// Tích 2 phân số x/y * a/b = (x*a)/(y*b)
 	private void multiply(Fraction fractionA, Fraction fractionB){
-		System.out.println("multiply");
+		this.setNumerator(fractionA.getNumerator() * fractionB.getNumerator());
+		this.setDenominator(fractionA.getDenominator() * fractionB.getDenominator());
+		this.normalize();
 	}
 	
 	// Thương 2 phân số x/y : a/b = (x*b)/(y*a)
 	private void divide(Fraction fractionA, Fraction fractionB){
-		System.out.println("divide");
+		this.setNumerator(fractionA.getNumerator() * fractionB.getDenominator());
+		this.setDenominator(fractionA.getDenominator() * fractionB.getNumerator());
+		this.normalize();
 	}
 		
 	// Tìm UCLN
-	private int UCLN(int x, int y){
+	public int UCLN(int x, int y){
 		int ucln	= Math.min(x, y);
 		while(ucln >= 1){
 			if(x % ucln == 0 && y % ucln == 0) return ucln;
@@ -75,7 +82,10 @@ public class Fraction {
 	
 	// Kiểm tra phân số tối giản (UCLN của tử số và mẫu số = 1)
 	public boolean checkNormalize(){
-		if(this.UCLN(this.getNumerator(), this.getDenominator()) == 1) return true;
+		int numerator = this.getNumerator();
+		int denomirator = this.getDenominator();
+		int ucln = this.UCLN(numerator, denomirator);
+		if(ucln == 1) return true;
 		return false;
 	}
 	
