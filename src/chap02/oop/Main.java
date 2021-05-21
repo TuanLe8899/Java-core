@@ -1,4 +1,4 @@
-package chap02_oop;
+package chap02.oop;
 
 public class Main {
 	
@@ -20,7 +20,7 @@ public class Main {
 		System.out.printf("%s / %s = %s \n", fractionA.print(), fractionB.print(), fractionF.print());
 	}
 		 
-	// UCLN của 2 số a và b là giá trị lớn nhất mà cả 2 số a và b đều chia hết cho nó 
+	// UCLN của 2 số a và b là giá trị lớn nhất mà cả 2 số a và b đ�?u chia hết cho nó 
 	// 3/9	1/3		UCLN = 3
 	public static void main011(String[] args) {
 		Fraction fractionA	= new Fraction(2, 8);	// 2/4

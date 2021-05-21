@@ -1,4 +1,4 @@
-package chap01_basic;
+package chap01.basic;
 import java.util.Scanner;
 
 public class Calculator {

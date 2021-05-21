@@ -1,4 +1,4 @@
-package chap02_oop;
+package chap02.oop;
 
 public class Counter {
 	public static int count	= 0;

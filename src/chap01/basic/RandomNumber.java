@@ -1,4 +1,4 @@
-package chap01_basic;
+package chap01.basic;
 
 public class RandomNumber {
 

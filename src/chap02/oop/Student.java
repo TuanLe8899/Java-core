@@ -1,4 +1,4 @@
-package chap02_oop;
+package chap02.oop;
 
 public class Student extends Person{
 	

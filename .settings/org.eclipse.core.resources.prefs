@@ -1,4 +1,8 @@
 eclipse.preferences.version=1
-encoding//src/chap01_basic/ATM.java=UTF-8
-encoding//src/chap02_oop/Fraction.java=UTF-8
-encoding//src/chap02_oop/Main.java=UTF-8
+encoding//src/BookStore/Store.java=UTF-8
+encoding//src/chap01/basic/ATM.java=UTF-8
+encoding//src/chap02/oop/Fraction.java=UTF-8
+encoding//src/chap02/oop/Main.java=UTF-8
+encoding//src/chap03/array/ArrayBasic.java=UTF-8
+encoding//src/chap03/array/ArrayClass.java=UTF-8
+encoding//src/chap03/array/ArrayExe.java=UTF-8

@@ -1,4 +1,4 @@
-package chap02_oop;
+package chap02.oop;
 
 import java.util.Calendar;
 
